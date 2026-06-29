@@ -103,7 +103,7 @@ assert 'd95f3ad14dee633a758d2e331151e950dd13e4ed' \
 
 # `--version`: intercepted by the wrapper's own version flag (the init override),
 # so it prints the WRAPPER's "git version <ver>", not git's. The container builds
-# with the default appVersion "dev".
+# with the default version "dev".
 assert 'git version dev' \
 	'--version prints the wrapper version (not git'\''s)' \
 	yup-git --version
