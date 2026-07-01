@@ -11,6 +11,8 @@ import (
 	"github.com/urfave/cli/v3"
 )
 
+const name = "git"
+
 // Error is the package's sentinel error type, making every emitted error path
 // comparable with errors.Is.
 type Error string
@@ -43,7 +45,7 @@ func run(version string, args []string, stdin io.Reader, stdout, stderr io.Write
 	cmd.Writer = stdout
 	cmd.ErrWriter = stderr
 	if err := cmd.Run(context.Background(), args); err != nil {
-		_, _ = fmt.Fprintf(stderr, "git: %v\n", err)
+		_, _ = fmt.Fprintf(stderr, name+": %v\n", err)
 		return 1
 	}
 	return 0
@@ -51,7 +53,7 @@ func run(version string, args []string, stdin io.Reader, stdout, stderr io.Write
 
 func newApp(version string, stdin io.Reader, stdout io.Writer) *cli.Command {
 	return &cli.Command{
-		Name:            "git",
+		Name:            name,
 		Version:         version,
 		Usage:           "git command wrapper for yupsh",
 		UsageText:       usageText,

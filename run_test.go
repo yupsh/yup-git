@@ -13,11 +13,11 @@ func TestRun(t *testing.T) {
 	cases := []struct {
 		name       string
 		version    string
-		args       []string
 		stdin      string
 		wantOutSub string
-		wantCode   int
 		wantErrSub string
+		args       []string
+		wantCode   int
 	}{
 		{
 			name:       "version flag reports injected version",
