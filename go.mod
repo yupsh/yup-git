@@ -6,7 +6,7 @@ require (
 	github.com/gloo-foo/cli v0.1.27
 	github.com/gloo-foo/cmd-git v0.1.20
 	github.com/spf13/afero v1.15.0
-	github.com/urfave/cli/v3 v3.11.0
+	github.com/urfave/cli/v3 v3.12.0
 )
 
 require (
